@@ -26,10 +26,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    user = User.find(current_user.id)
-    @product = user.products.new(product_params)
-
-    
+    # @product = Product.new(product_params)
+    @product = current_user.products.new(product_params)
 
 
 
